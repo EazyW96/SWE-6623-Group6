@@ -1,0 +1,140 @@
+/* Center elements on the page */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+/* Container for calendar and login sections */
+#login-section,
+#calendar-section {
+  width: 100%;
+  max-width: 1000px; /* Full width on larger screens */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  background-color: white;
+}
+
+/* Style for input fields and buttons */
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Calendar grid styling */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px; /* Default gap for most screens */
+  margin-top: 20px;
+}
+
+/* Style for day headers (Sun, Mon, etc.) */
+.day-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Style for each day cell */
+.day {
+  min-height: 100px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+
+/* Large desktops (1000px and up) */
+@media (min-width: 1000px) {
+  #calendar-section {
+    max-width: 1200px;
+  }
+  .day {
+    min-height: 120px;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .day-header {
+    padding: 20px 0;
+    font-size: 18px;
+  }
+}
+
+/* Medium devices (tablets and small desktops - 768px to 999px) */
+@media (max-width: 999px) and (min-width: 768px) {
+  #calendar-section {
+    max-width: 800px;
+  }
+  .day {
+    min-height: 90px;
+    font-size: 16px;
+    padding: 8px;
+  }
+  .day-header {
+    padding: 15px 0;
+    font-size: 16px;
+  }
+}
+
+/* Small devices (landscape phones - 600px to 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
+  #calendar-section {
+    max-width: 600px;
+  }
+  .day {
+    min-height: 80px;
+    font-size: 14px;
+    padding: 6px;
+  }
+  .day-header {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
+
+/* Extra small devices (portrait phones - less than 600px) */
+@media (max-width: 599px) {
+  #calendar-section {
+    max-width: 100%; /* Use full width on small devices */
+  }
+  #calendar {
+    gap: 3px;
+  }
+  .day {
+    min-height: 60px;
+    font-size: 12px;
+    padding: 3px;
+  }
+  .day-header {
+    padding: 8px 0;
+    font-size: 12px;
+  }
+}

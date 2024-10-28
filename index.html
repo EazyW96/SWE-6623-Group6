@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Event Calendar</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Login Section -->
+    <div id="login-section">
+      <h2>Login</h2>
+      <input type="email" id="email" placeholder="Email" autocomplete="email">
+      <input type="password" id="password" placeholder="Password"
+        autocomplete="current-password">
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Calendar Section -->
+    <div id="calendar-section" style="display: none;">
+      <h2>HR Event Calendar</h2>
+      <button id="addEventButton" style="display: none;"
+        onclick="showAddEventForm()">Add Event</button>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
